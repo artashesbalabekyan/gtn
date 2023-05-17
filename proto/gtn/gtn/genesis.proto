@@ -1,0 +1,12 @@
+syntax = "proto3";
+package gtn.gtn;
+
+import "gogoproto/gogo.proto";
+import "gtn/gtn/params.proto";
+
+option go_package = "GTN/x/gtn/types";
+
+// GenesisState defines the gtn module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
